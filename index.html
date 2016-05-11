@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Pong game</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body onload="start()">
+
+<header>
+    <strong>Démonstration de WebGL / Three.js</strong><br>
+    <button type="button" class="btn btn-info" onclick="newGame()">Nouvelle partie</button>
+</header>
+
+<div id="config" class="alert alert-info">
+    <strong>Configuration</strong>
+    <p>Taille de la balle : <input id="sizeBall" type="range" value="30" min="20" max="70" step="10" onchange="updateSizeBall(this.value)" /></p>
+    <p>Vitesse de la balle : <input id="speedBall" type="range" value="5" min="3" max="8" onchange="updateSpeedBall(this.value)" /></p>
+</div>
+
+<div class="popup alert alert-success">
+    <strong>Victoire</strong> Vous avez gagné la partie !
+</div>
+<div class="popup alert alert-danger">
+    <strong>Défaite</strong> Vous avez perdu la partie.
+</div>
+
+<div id="container"></div>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="lib/three.min.js"></script>
+<script type="text/javascript" src="script/Controls.js"></script>
+<script type="text/javascript" src="script/Composants.js"></script>
+<script type="text/javascript" src="script/Jeu.js"></script>
+<script type="text/javascript" src="script/main.js"></script>
+<script type="text/javascript" src="script/Evenements.js"></script>
+</body>
+</html>
+
+
